@@ -19,12 +19,12 @@
                                 <form>
                                     <div class="mb-3">
                                         <label class="form-label">Email</label>
-                                        <input class="form-control form-control-lg" type="email" name="email"
+                                        <input class="form-control form-control-lg email " type="email" name="email"
                                             placeholder="Email adresinizi giriniz." />
                                     </div>
                                     <div class="mb-3">
                                         <label class="form-label">Şifre</label>
-                                        <input class="form-control form-control-lg" type="password" name="password"
+                                        <input class="form-control form-control-lg password" type="password" name="password"
                                             placeholder="Şifrenizi giriniz." />
                                     </div>
                                     <div>
@@ -36,7 +36,7 @@
                                         </div>
                                     </div>
                                     <div class="d-grid gap-2 mt-3">
-                                        <button type="button" class="btn btn-lg btn-primary">Giriş Yap</button>
+                                        <button type="button" class="btn btn-lg btn-primary loginBtn">Giriş Yap</button>
                                     </div>
                                 </form>
                             </div>
@@ -49,4 +49,13 @@
             </div>
         </div>
     </div>
+
+    <script type="text/javascript">
+        var checkInterval = setInterval(function() {
+            if (app.loader !== undefined && app.loader !== null) {
+                app.loader.setModule("Login");
+                clearInterval(checkInterval);
+            }
+        }, 500);
+    </script>
 @endsection

@@ -25,8 +25,10 @@
         @yield('auth_content')
     </main>
 
-    <script src="/template/static/js/app.js"></script>
+    @vite(['resources/js/plugins.js'])
+    @vite(['resources/js/app.js'])
 
+    <script src="/template/static/js/app.js"></script>
 </body>
 
 </html>
